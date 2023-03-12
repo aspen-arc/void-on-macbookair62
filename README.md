@@ -42,7 +42,7 @@ When choosing filesystems, order matters!
  ```
  $ date
  ```
- 
+ * Then finish
  ```
  $ hwclock --systohc
  ```

@@ -30,10 +30,10 @@ $ void-installer
 ### Depedencies
 
  ```
- $  xbps-install ntp dracut acpid
+ $  xbps-install ntp dracut acpid wpa_supplicant
  ```
 
-### date
+### Date
 
  ```
  $ ntpd
@@ -47,7 +47,7 @@ $ void-installer
  $ hwclock --systohc
  ```
 
-### networking
+### Wifi
 ```
 $ git clone git://github.com/void-linux/void-packages
 $ cd void-packages
@@ -101,11 +101,3 @@ $ xbps-reconfigure -f linux
 ```
 $ xbps-install xf86-video-intel noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra xorg
 ```
-   
-## References
-* https://wiki.voidlinux.org/Installation
-* https://wiki.voidlinux.org/Installation:_UEFI
-* https://wiki.voidlinux.org/Network_Configuration#WPA-PSK_encryption_.28WPA_Personal.29
-* https://wiki.voidlinux.org/Macbook
-* https://wiki.archlinux.org/index.php/Mac#Mid_2013_13"_-_Version_6,2
-* https://www.ifnull.org/articles/void_mouse_on_mac/

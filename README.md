@@ -30,7 +30,7 @@ $ void-installer
 ### Depedencies
 
  ```
- $  xbps-install ntp dracut acpid wpa_supplicant
+ $  xbps-install ntp dracut acpid wpa_supplicant dkms
  ```
 
 ### Date

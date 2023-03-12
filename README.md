@@ -38,7 +38,7 @@ When choosing filesystems, order matters!
  ```
  $ ntpd
  ```
- ** Then check time
+ * Then check time
  ```
  $ date
  ```

@@ -1,18 +1,13 @@
 # void-on-macbookair62
 # Void Linux Macbook Air 2013
 
-Flash installer:
-```
-$ dd if=void-live-x86_64-musl-20181111.iso of=/dev/X bs=1m
-```
-
-login as root:voidlinux
-
 ## Base Install:
+
+** $ Means user, # Means root/sudo **
+
 ```
-$ cfdisk -z
+$ cfdisk /dev/sda
 ```
-* Choose gpt
 * Delete all partitions and write
 
 ```
@@ -36,10 +31,22 @@ When choosing filesystems, order matters!
 ## Post Install:
 
 ### date
+
 ```
-$ date -s "YYYY-mm-dd HH:MM:SS"
-$ hwclock --systohc
+$  xbps-install ntp dracut
 ```
+
+ ```
+ $ ntpd
+ ```
+ ** Then check time
+ ```
+ $ date
+ ```
+ 
+ ```
+ $ hwclock --systohc
+ ```
 
 ### networking
 ```
@@ -95,7 +102,7 @@ $ powertop --auto-tune
 Microcode updates:
 ```
 $ xbps-install -S intel-ucode
-$ xbps-reconfigure -f linux4.19
+$ xbps-reconfigure -f linux
 ```
 
 Desktop env:

@@ -58,19 +58,19 @@ $ xbps-install -S dbus && ln -s /etc/sv/dbus /var/service
 $ wpa_passphrase <ssid> <key> >> /etc/wpa_supplicant/wpa_supplicant.conf
 ```
   
-### sound
+### Sound
 ```
 $ xbps-install pulseaudio alsa-utils
 ```
 
-### trackpad
+### Trackpad
 * Run:
 ```
 $ echo "add_drivers+=\"bcm5974\"" > /etc/dracut.conf.d/10-touchpad.conf
 $ dracut --force
 ```
 
-### other stuff
+### Other stuff
 * Fans:
 ```
 $ xbps-install mbpfan

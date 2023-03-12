@@ -11,14 +11,14 @@ $ cfdisk /dev/sda or $ gdisk /dev/sda
 $ void-installer
 ```
 
-Set up the following partitions:
+* Set up the following partitions:
 ```
 /dev/sda1 512M EFI
 /dev/sda2 4G   swap
 /dev/sda3 --   linux
 ```
 
-When choosing filesystems, order matters!
+* When choosing filesystems, order matters!
 ```
 /dev/sda3 ext4  /
 /dev/sda2 swap
@@ -64,26 +64,26 @@ $ xbps-install pulseaudio alsa-utils
 ```
 
 ### trackpad
-Run:
+* Run:
 ```
 $ echo "add_drivers+=\"bcm5974\"" > /etc/dracut.conf.d/10-touchpad.conf
 $ dracut --force
 ```
 
 ### other stuff
-Fans:
+* Fans:
 ```
 $ xbps-install mbpfan
 $ ln -s /etc/sv/mbpfan /var/service
 $ mbpfan -t
 ```
  
-Lid hibernate:
+* Lid hibernate:
 ```
 $ ln -s /etc/sv/acpid /var/service
 ```
   
-Powersave:
+* Powersave:
 ```
 $ xbps-install thermald
 $ ln -s /etc/sv/thermald /var/service
@@ -91,13 +91,13 @@ $ xbps-install powertop
 $ powertop --auto-tune
 ```
 
-Microcode updates:
+* Microcode updates:
 ```
 $ xbps-install -S intel-ucode
 $ xbps-reconfigure -f linux
 ```
 
-Desktop env:
+* Graphics:
 ```
 $ xbps-install xf86-video-intel noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra xorg
 ```

@@ -1,12 +1,9 @@
 # void-on-macbookair62
-# Void Linux Macbook Air 2013
 
-## Base Install:
-
-** $ Means user, # Means root/sudo **
+## Base Install: 
 
 ```
-$ cfdisk /dev/sda
+$ cfdisk /dev/sda or $ gdisk /dev/sda
 ```
 * Delete all partitions and write
 
@@ -30,11 +27,13 @@ When choosing filesystems, order matters!
 
 ## Post Install:
 
-### date
+### Depedencies
 
-```
-$  xbps-install ntp dracut
-```
+ ```
+ $  xbps-install ntp dracut acpid
+ ```
+
+### date
 
  ```
  $ ntpd
@@ -61,14 +60,7 @@ $ wpa_passphrase <ssid> <key> >> /etc/wpa_supplicant/wpa_supplicant.conf
   
 ### sound
 ```
-$ xbps-install alsa-utils
-```
-
-Choose soundcard with F6 and unmute with 'm'. Add to /etc/asound.conf:
-```
-defaults.pcm.card 1
-defaults.pcm.device 0
-defaults.ctl.card 1
+$ xbps-install pulseaudio alsa-utils
 ```
 
 ### trackpad
@@ -107,7 +99,7 @@ $ xbps-reconfigure -f linux
 
 Desktop env:
 ```
-$ xbps-install xorg-minimal dejavu-font-ttf xf86-video-intel
+$ xbps-install xf86-video-intel noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra xorg
 ```
    
 ## References
